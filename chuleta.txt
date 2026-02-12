@@ -1,0 +1,19 @@
+Primero instalamos el entorno virtual en este caso sera virtualenv:
+-
+python -m venv venv
+--
+Luego lo activamos 
+-
+.\venv\Scripts\Activate
+
+----
+Instalar Django
+-
+pip install django
+--
+Comprobar de que lo tenemos 
+-
+django-admin --version
+--
+Crear Proyecto
+django-admin startproject nombre del proyecto .
