@@ -17,3 +17,11 @@ django-admin --version
 --
 Crear Proyecto
 django-admin startproject nombre del proyecto .
+--
+Arrancarlo
+-
+python manage.py runserver
+--
+Ahora quierro arrancarlo en el puerto 300
+-
+python manage.py runserver 3000

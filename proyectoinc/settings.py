@@ -13,24 +13,24 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent #Esto nos dice los directorios que tiene el proyecto.
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--a4!934z*2+3#kzn@^yn1-n#i7yfw=rmgb#rw(4_2utq96w2w*'
+SECRET_KEY = 'django-insecure--a4!934z*2+3#kzn@^yn1-n#i7yfw=rmgb#rw(4_2utq96w2w*' #Esto sirve para mejorar la encriptacion de los ususarios
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True #Esto le dice a nuestra aplicacion que estamos en modo desarrollo o en modo produccion (Si estamos en produccion lo tenemos que cambiar a False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [] #Esto permite que sitios web tiene permitido consultar al servidor
 
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [    #Basicamente permite dividir la aplicacion en multiples partes
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE = [ #Esto es decirle a Django de como procesar los datos de distinta manera
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -72,7 +72,7 @@ WSGI_APPLICATION = 'proyectoinc.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-DATABASES = {
+DATABASES = { #Nos dice que base de datosnos estamos conectando
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
@@ -83,7 +83,7 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
+AUTH_PASSWORD_VALIDATORS = [ #Otro tipos de contraseñas a la hora de como autenticar las contraseñas.
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
@@ -101,6 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
+#Configuraciones genericas 
 
 LANGUAGE_CODE = 'en-us'
 
@@ -114,4 +115,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/' #Esto es para decirle en donde estan los archivos staticos.
