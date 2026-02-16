@@ -25,3 +25,9 @@ python manage.py runserver
 Ahora quierro arrancarlo en el puerto 300
 -
 python manage.py runserver 3000
+-- 
+Para iniciar una app
+-
+python manage.py startapp nombre de la app
+#Te abre una carpeta nueva con los archivos .py 
+---

@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+#from myapp.views import hello # Otro metodo para hacerlo
+from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls), #Esto es las URL que los clientes pueden visiar.
+ #   path('', hello)
+    path('', views.hello),
+    path('about/', views.about) #twngo que poner el /about en el navegador 
 ]
