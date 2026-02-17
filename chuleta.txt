@@ -31,3 +31,14 @@ Para iniciar una app
 python manage.py startapp nombre de la app
 #Te abre una carpeta nueva con los archivos .py 
 ---
+Actualizar la base de datos 
+-
+python manage.py migrate
+--
+Actualizar la base de datos de una app en especifico
+-
+python manage.py makemigrations nombre de la app
+---
+duda
+--
+python manage.py migrate myapp 

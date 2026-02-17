@@ -37,6 +37,7 @@ INSTALLED_APPS = [    #Basicamente permite dividir la aplicacion en multiples pa
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'myapp'
 ]
 
 MIDDLEWARE = [ #Esto es decirle a Django de como procesar los datos de distinta manera
