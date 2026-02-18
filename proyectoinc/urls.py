@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls), #Esto es las URL que los clientes pueden visiar.
  #   path('', hello)
     # path('', views.hello),
-    # path('about/', views.about) #twngo que poner el /about en el navegador 
+    # path('about/', views.about) #tengo que poner el /about en el navegador 
     path('', include('myapp.urls'))
 ]
