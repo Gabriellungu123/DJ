@@ -63,19 +63,19 @@ ahora tendremos una nueva fila
 -
 Otro ejemplo 
 .
- p=Project(name="aplicacion web usando Django") 
+p=Project(name="aplicacion web usando Django") 
  --
- p.save()
+p.save()
  -
 Muestra todos los proyectos guardados en la base de datos.
  --
- Project.objects.all()
+Project.objects.all()
  -
 Devuelve el proyecto con id 1 desde la base de datos usando el modelo Project.
  --
- Project.objects.get(id=1)
- -
- Devuelve el proyecto cuyo nombre es “aplicacion movil” desde la base de datos.
+Project.objects.get(id=1)
+-
+Devuelve el proyecto cuyo nombre es “aplicacion movil” desde la base de datos.
 --
 Project.objects.get(name="aplicacion movil") 
 -
@@ -107,10 +107,14 @@ Project.objects.filter(name__startswith="aplicacion")
 -
  Guarda en  el manager de consultas del modelo , que sirve para hacer búsquedas.
  --
- p = Project.objects
+p = Project.objects
 -
 Filtra y devuelve todos los proyectos cuyo nombre empieza por “aplicacion”.
 --
 p.filter(name__startswith="aplicacion")
 -----------
 Params
+---
+Model y Params
+---
+Django admin
