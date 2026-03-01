@@ -112,3 +112,5 @@ Project.objects.filter(name__startswith="aplicacion")
 Filtra y devuelve todos los proyectos cuyo nombre empieza por “aplicacion”.
 --
 p.filter(name__startswith="aplicacion")
+-----------
+Params
