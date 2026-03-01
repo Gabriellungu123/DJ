@@ -42,3 +42,73 @@ python manage.py makemigrations nombre de la app
 duda
 --
 python manage.py migrate myapp 
+-
+comando de Django que abre una consola interactiva de Python, pero con tu proyecto Django ya cargado.
+--
+python manage.py shell
+-
+Importa los modelos Project y Task desde tu aplicación Django para poder usarlos dentro del shell
+--
+from myapp.models import Project, Task
+-
+Crea un objeto Project llamado “aplicacion movil” y lo guarda en la variable p.
+--
+p=Project(name="aplicacion movil") 
+-
+Para guardarlo en la base de datos
+--
+p.save()
+.
+ahora tendremos una nueva fila 
+-
+Otro ejemplo 
+.
+ p=Project(name="aplicacion web usando Django") 
+ --
+ p.save()
+ -
+Muestra todos los proyectos guardados en la base de datos.
+ --
+ Project.objects.all()
+ -
+Devuelve el proyecto con id 1 desde la base de datos usando el modelo Project.
+ --
+ Project.objects.get(id=1)
+ -
+ Devuelve el proyecto cuyo nombre es “aplicacion movil” desde la base de datos.
+--
+Project.objects.get(name="aplicacion movil") 
+-
+Ejecutar tareas
+----
+- Explicación: Busca en la base de datos el proyecto con id = 1 y lo guarda en la variable p.
+--
+p = Project.objects.get(id=1)
+-
+- Muestra la representación del objeto p; en este caso indica que es el proyecto con id 1
+--
+p
+-
+- Muestra todas las tareas relacionadas con ese proyecto p; aquí la lista está vacía ([]) porque aún no tiene tareas asociadas.
+--
+p.task_set.all()
+-
+Crea una nueva tarea asociada al proyecto  con el título “descargar IDE”.
+--
+p.task_set.create(title="descargar IDE")
+-
+Devuelve la tarea con id 1 que pertenece al proyecto p.
+--
+p.task_set.get(id=1)
+-
+Devuelve todos los proyectos cuyo nombre empieza por “aplicacion” usando un filtro por prefijo.
+--
+Project.objects.filter(name__startswith="aplicacion")
+-
+ Guarda en  el manager de consultas del modelo , que sirve para hacer búsquedas.
+ --
+ p = Project.objects
+-
+Filtra y devuelve todos los proyectos cuyo nombre empieza por “aplicacion”.
+--
+p.filter(name__startswith="aplicacion")
