@@ -118,3 +118,15 @@ Params
 Model y Params
 ---
 Django admin
+
+-
+comando de Django que crea un usuario administrador con acceso total al panel de administración del proyecto.
+--
+python manage.py createsuperuser
+*Te pedira nombre, email y contraseña
+
+*Ahora para añadir lastablas en la web del admin nos vamos a nuestro proyecto y en admin.py
+
+
+----
+Render
