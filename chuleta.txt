@@ -130,3 +130,6 @@ python manage.py createsuperuser
 
 ----
 Render
+
+--------
+Templates
