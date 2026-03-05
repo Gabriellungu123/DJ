@@ -4,10 +4,16 @@ from django.shortcuts import get_object_or_404, render
 
 
 def index(request):
-    return render(request, 'index.html')
+    title= 'Django Course'
+    return render(request, 'index.html',{
+        'titulo': title
+    })
 
 def about(request):
-    return render(request, 'about.html')
+    username = 'Gabriel'
+    return render(request, 'about.html',{
+        'usuario' : username
+    })
 
 def hello(request, username):
     return HttpResponse("<h1>Hello %s</h1>" %username)
@@ -17,8 +23,10 @@ def numero(request, id):
     return HttpResponse("<h1>El numero es %s</h1>" % result)
 
 def projects(request):
-    projects = list(Project.objects.values())
-    return render(request, 'projects.html')
+    projects = Project.objects.values()
+    return render(request, 'projects.html', {
+        'proyectos': projects
+    })
     
 
 def tasks(request):
