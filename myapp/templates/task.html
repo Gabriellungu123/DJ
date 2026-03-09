@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Task</h1>
+    {% for x in tareas %}
+        <h1>{{x.title}}</h1>
+        <p>{{x.description}}</p>
+        <p>Project: {{x.project.name}}</p>
+    {%endfor%}
 </body>
 </html>

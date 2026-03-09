@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Project</h1>
-    {{ proyectos }}
-</body>
-</html>
+
+
+    
+    {% for project in proyectos %}
+
+    <h1>{{project.name}}</h1>
+
+    {% endfor %}
+
+

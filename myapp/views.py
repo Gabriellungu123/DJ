@@ -23,7 +23,7 @@ def numero(request, id):
     return HttpResponse("<h1>El numero es %s</h1>" % result)
 
 def projects(request):
-    projects = Project.objects.values()
+    projects = Project.objects.all()
     return render(request, 'projects.html', {
         'proyectos': projects
     })
@@ -31,7 +31,10 @@ def projects(request):
 
 def tasks(request):
     #task = get_object_or_404(Task, id=id)
-    return render(request, 'task.html')
+    task = Task.objects.all()
+    return render(request, 'task.html',{
+        'tareas':task
+    })
 
 # def projects(request):
 #     projects = list(Project.objects.values())
