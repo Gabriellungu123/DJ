@@ -6,10 +6,28 @@
     <title>Document</title>
 </head>
 <body>
+
     {% for x in tareas %}
-        <h1>{{x.title}}</h1>
-        <p>{{x.description}}</p>
-        <p>Project: {{x.project.name}}</p>
-    {%endfor%}
+        <div>
+            <h1>{% if x.done == False %} ⌛{% else %} ✅ {% endif %} {{x.title}}</h1>
+
+            <!-- {% if x.done == False %}
+            <p>Tarea pendiente</p>
+            {% else %}
+            <p>Tarea realizada</p>
+            {% endif %} -->
+
+            
+
+            <p>{{x.description}}</p>
+            <p>Project: {{x.project.name}}</p>
+        <button>
+            Delete
+        </button>
+        <button>
+            Done
+        </button>
+        </div>
+    {%endfor%} 
 </body>
 </html>

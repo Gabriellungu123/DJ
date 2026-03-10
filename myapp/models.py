@@ -13,6 +13,8 @@ class Task(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     project = models.ForeignKey(Project, on_delete=models.CASCADE) #Ese foreignkey es para relacionar esa tabla con la de arriba  #Ese on_delete=models.CASCADE es para que si la tabla anterior se borra lo que le siga a la relacionada tambien 
+    done = models.BooleanField(default=False) #indica que, cuando se crea un nuevo objeto del modelo, este campo tendrá automáticamente el valor  si no se especifica otro.
+
     
     def __str__(self):
         return self.title #Esto es clave fijate el title que no es name

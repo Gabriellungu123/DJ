@@ -1,3 +1,6 @@
+gabriel
+gabrielclase
+--
 Primero instalamos el entorno virtual en este caso sera virtualenv:
 -
 python -m venv venv
@@ -137,3 +140,5 @@ Templates
 Jinjaloops
 ---
 Jinja condicionals
+--
+Template Inheritance
