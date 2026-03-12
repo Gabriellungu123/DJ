@@ -1,33 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'layouts/base.html' %}
 
-    {% for x in tareas %}
-        <div>
-            <h1>{% if x.done == False %} ⌛{% else %} ✅ {% endif %} {{x.title}}</h1>
+    {% block content  %}
+        {% for x in tareas %}
+            <div>
+                <h1>{% if x.done == False %} ⌛{% else %} ✅ {% endif %} {{x.title}}</h1>
 
-            <!-- {% if x.done == False %}
-            <p>Tarea pendiente</p>
-            {% else %}
-            <p>Tarea realizada</p>
-            {% endif %} -->
+                <!-- {% if x.done == False %}
+                <p>Tarea pendiente</p>
+                {% else %}
+                <p>Tarea realizada</p>
+                {% endif %} -->
 
-            
+                
 
-            <p>{{x.description}}</p>
-            <p>Project: {{x.project.name}}</p>
-        <button>
-            Delete
-        </button>
-        <button>
-            Done
-        </button>
-        </div>
-    {%endfor%} 
-</body>
-</html>
+                <p>{{x.description}}</p>
+                <p>Project: {{x.project.name}}</p>
+            <button>
+                Delete
+            </button>
+            <button>
+                Done
+            </button>
+            </div>
+        {%endfor%} 
+    {% endblock  %}
