@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from .models import Project, Task
 from django.shortcuts import get_object_or_404, render, redirect
-from .forms import CreateNewTask
+from .forms import CreateNewTask, CreateNewProject
 
 
 def index(request):
@@ -25,7 +25,7 @@ def numero(request, id):
 
 def projects(request):
     projects = Project.objects.all()
-    return render(request, 'projects.html', {
+    return render(request, 'project/projects.html', {
         'proyectos': projects
     })
     
@@ -33,7 +33,7 @@ def projects(request):
 def tasks(request):
     #task = get_object_or_404(Task, id=id)
     task = Task.objects.all()
-    return render(request, 'task.html',{
+    return render(request, 'task/task.html',{
         'tareas':task
     })
 
@@ -48,10 +48,21 @@ def tasks(request):
 def create_task(request):
     if request.method == 'GET':
         #Show interface
-        return render(request, 'create_task.html', {
+        return render(request, 'task/create_task.html', {
             'form': CreateNewTask()
         })
     else:
         Task.objects.create(title=request.POST['title'], description= request.POST['description'], project_id=2)
         return redirect('/tasks/')
         
+def create_project(request):
+    if request.method == 'GET':
+        return render(request, 'project/create_project.html', {
+            'form': CreateNewProject()
+        })
+    else:
+        project = Project.objects.create(name=request.POST["name"])
+        print = (project)
+        return render(request, 'project/create_project.html', {
+            'form': CreateNewProject()
+        })

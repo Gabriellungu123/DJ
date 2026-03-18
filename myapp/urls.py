@@ -10,7 +10,8 @@ urlpatterns = [
      path('numero/<int:id>', views.numero),
      path('projects/', views.projects),
      path('tasks/', views.tasks),
-     path('create_task/', views.create_task)
+     path('create_task/', views.create_task),
+     path('create_project/', views.create_project)
      #path('tasks/<int:id>', views.tasks)
 ]
 
