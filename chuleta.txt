@@ -150,3 +150,4 @@ Formularios POST
 URLS name
 
 ---
+static files 
